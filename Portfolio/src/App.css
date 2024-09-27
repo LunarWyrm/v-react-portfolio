@@ -1,0 +1,42 @@
+body {
+    background-color: #121212; /* Dark background */
+    color: #f0f0f0; /* Light text */
+  }
+  
+  .nav-link {
+    color: #f0f0f0;
+  }
+  
+  .nav-link.active {
+    background-color: #222222;
+    color: #ffffff;
+  }
+ 
+  .card {
+    border: 1px solid #98E970;
+  }
+  
+  .btn-outline-light {
+    border-color: #98E970;
+    color: #98E970;
+  }
+  
+  .btn-outline-light:hover {
+    background-color: #98E970;
+    color: #000000;
+  }
+  
+  footer {
+    background-color: #121212; /* Ensure it's dark like the rest of the site */
+    padding: 20px 0;
+  }
+  
+  footer a {
+    text-decoration: none;
+    color: #98E970; /* Light green for link hover */
+  }
+  
+  footer a:hover {
+    color: #ffffff; /* White on hover */
+  }
+  
