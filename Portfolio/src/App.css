@@ -2,6 +2,10 @@ body {
     background-color: #121212; /* Dark background */
     color: #f0f0f0; /* Light text */
   }
+  .name {
+    font-size: 80px;
+    margin-left: 30px;
+  }
   
   .nav-link {
     color: #f0f0f0;
