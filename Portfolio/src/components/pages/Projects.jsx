@@ -4,28 +4,34 @@ import Project from '../Project';
 export default function Projects() {
   const projectData = [
     {
-      title: 'Project One',
-      description: 'A description of Project One, which is an amazing project that solves X problem.',
-      link: 'https://project-one-link.com',
-      repo: 'https://github.com/your-github/project-one',
+      title: 'Quiz Questers',
+      description: 'QuizQuesters is for those who have a love for trivia and winning cool pixel art saved to your account to show all your friends!',
+      link: 'https://crob127.github.io/QuizQuesters/',
+      repo: 'https://github.com/crob127/QuizQuesters',
     },
     {
-      title: 'Project Two',
-      description: 'This is Project Two, a fantastic app that helps you do Y.',
-      link: 'https://project-two-link.com',
-      repo: 'https://github.com/your-github/project-two',
+      title: 'Tendr',
+      description: 'A platform for meeting other pet owners and setting up playdates!',
+      link: 'https://tendr-va9s.onrender.com/',
+      repo: 'https://github.com/sjean149/PetTinder-Group-Project2',
     },
     {
-      title: 'Project Three',
-      description: 'An innovative solution for Z, Project Three has these features...',
-      link: 'https://project-three-link.com',
-      repo: 'https://github.com/your-github/project-three',
+      title: 'InkSync',
+      description: 'A simple text editor with PWA functionality.',
+      link: 'https://inksync-xawq.onrender.com/',
+      repo: 'https://github.com/LunarWyrm/inksync',
+    },
+    {
+      title: 'Weather Dashboard',
+      description: 'Read the weather forecast for your city in a sleek environment.',
+      link: 'https://lunarwyrm.github.io/weatherdashboard/',
+      repo: 'https://github.com/LunarWyrm/weatherdashboard',
     },
   ];
 
   return (
     <div className="container">
-      <h2 className="my-4">My Projects</h2>
+      <h2 className="name my-4">My Projects</h2>
       <div className="row">
         {projectData.map((project, index) => (
           <div className="col-md-4" key={index}>

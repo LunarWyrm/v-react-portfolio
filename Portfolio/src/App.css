@@ -1,46 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 body {
-    background-color: #121212; /* Dark background */
-    color: #f0f0f0; /* Light text */
-  }
-  .name {
-    font-size: 80px;
-    margin-left: 30px;
-  }
-  
-  .nav-link {
-    color: #f0f0f0;
-  }
-  
-  .nav-link.active {
-    background-color: #222222;
-    color: #ffffff;
-  }
- 
-  .card {
-    border: 1px solid #98E970;
-  }
-  
-  .btn-outline-light {
-    border-color: #98E970;
-    color: #98E970;
-  }
-  
-  .btn-outline-light:hover {
-    background-color: #98E970;
-    color: #000000;
-  }
-  
-  footer {
-    background-color: #121212; /* Ensure it's dark like the rest of the site */
-    padding: 20px 0;
-  }
-  
-  footer a {
-    text-decoration: none;
-    color: #98E970; /* Light green for link hover */
-  }
-  
-  footer a:hover {
-    color: #ffffff; /* White on hover */
-  }
-  
+  background-color: #121212;
+  color: #f0f0f0;
+  font-family: 'Orbitron', sans-serif;
+  overflow: hidden;
+}
+
+.header {
+  background-color: linear-gradient(135deg, #03b96d 0%,#02a25f 44%,#00824c 100%);
+  color: #f0f0f0;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.home {
+  display: flex;
+  align-items: center; /* Aligns items vertically */
+}
+
+.profile-container {
+  display: flex;
+  align-items: center; /* Centers the image and name vertically */
+}
+
+.v-profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; /* Makes the image circular */
+  object-fit: cover; /* Ensures the image covers the entire area */
+  object-position: 50% 20%; /* Adjusts the focal point of the image */
+  box-shadow: 
+    0 0 10px 4px rgba(0, 255, 255, 0.9), 
+    0 0 20px 8px rgba(255, 0, 255, 0.7),
+    0 0 30px 12px rgba(255, 255, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.v-profile:hover {
+  transform: scale(1.1);
+}
+
+/* Main Content Column in the Center */
+
+.center-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 20px;
+  width: calc(100vw - 400px);
+  height: 100vh;
+  background-color: rgb(31, 31, 31);
+  z-index: 1;
+}
+
+
+main {
+  flex-grow: 1;
+}
+
+.Footer {
+  margin-top: auto;
+}
+
+.monstera-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  height: 100%;
+  width: 100vw; /* Full viewport width */
+}
+
+/* Left Monstera section */
+.monstera-left {
+  background-image: url('/images/monstera_pattern.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 200px; /* Adjust width to fit your design */
+  height: 100vh; /* Full viewport height */
+  position: fixed; /* Stick it to the left */
+  left: 0;
+}
+
+/* Right Monstera section */
+.monstera-right {
+  background-image: url('/images/monstera_pattern.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 200px; /* Adjust width to fit your design */
+  height: 100vh; /* Full viewport height */
+  position: fixed; /* Stick it to the right */
+  right: 0;
+}
+
+.name {
+  font-size: 50px;
+  margin-top: 10%;
+  margin-left: 50px;
+  text-shadow: 0 0 10px rgba(255, 0, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.7); /* Text shadow */
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Transition effects */
+}
+
+.name:hover {
+  color: #98E970; /* Green color on hover */
+  text-shadow: 0 0 20px rgba(255, 255, 0, 0.9), 0 0 30px rgba(128, 0, 255, 0.8); /* Shadow on hover */
+  animation: glitch 0.5s infinite; /* Glitch effect on hover */
+}
+
+/* Nav link styles */
+.nav {
+  display: flex;              /* Use Flexbox for layout */
+  justify-content: center;    /* Center items horizontally */
+  background: linear-gradient(135deg, #03b96d 0%,#02a25f 44%,#00824c 100%);
+  color: #f0f0f0;
+  width: 100%;                /* Full width of the page */
+  position: fixed;            /* Fixed positioning to stay at the top */
+  top: 0;                     /* Align to the top */
+  left: 0;                    /* Align to the left edge */
+  padding: 10px 0;           /* Add some padding */
+  z-index: 10;
+}
+.nav-link {
+  color: #f0f0f0; /* Light color */
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.7); /* Text shadow */
+  transition: color 0.3s ease; /* Transition effect */
+}
+
+.nav-link:hover {
+  color: #98E970; /* Green color on hover */
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.9), 0 0 20px rgba(255, 0, 128, 0.8); /* Shadow on hover */
+}
+
+.nav-link.active {
+  background-color: #222222; /* Dark background for active link */
+  color: #ffffff; /* White text */
+  border-bottom: 2px solid #98E970; /* Green underline */
+}
+
+/* Card styles */
+.card {
+  border: 1px solid #98E970; /* Green border */
+  box-shadow: 0 0 15px rgba(116, 165, 255, 0.918), 0 0 20px rgba(51, 255, 0, 0.7); /* Shadow */
+  transition: box-shadow 0.3s ease; /* Transition effect */
+margin: 10px;
+}
+
+.card:hover {
+  box-shadow: 0 0 30px rgba(255, 0, 128, 0.9), 0 0 40px rgba(0, 255, 255, 0.9); /* Shadow on hover */
+}
+
+/* Button styles */
+.btn-outline-light {
+  border-color: #98E970; /* Green border */
+  color: #98E970; /* Green text */
+  text-shadow: 0 0 5px rgba(128, 0, 255, 0.7); /* Text shadow */
+  transition: background-color 0.3s ease, color 0.3s ease, text-shadow 0.3s ease; /* Transition effects */
+}
+
+.btn-outline-light:hover {
+  background-color: #98E970; /* Green background on hover */
+  color: #000000; /* Black text on hover */
+  text-shadow: none; /* Remove text shadow */
+}
+
+/* Footer styles */
+footer {
+  background-color: #121212; /* Dark footer background */
+  color: #98E970; /* Green text */
+  width: 100%; /* Full width */
+  padding: 20px;
+  text-align: center; /* Center the text */
+  position: relative; /* Keeps the footer on top of the content */
+  z-index: 10; /* Ensures the footer is above the center box */
+}
+
+footer a {
+  text-decoration: none; /* No underline */
+  color: #98E970; /* Green link color */
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Transition effects */
+}
+
+footer a:hover {
+  color: #ffffff; /* White link on hover */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* Shadow on hover */
+}
+
+.copy-ve {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Glitch effect */
+@keyframes glitch {
+  0% { text-shadow: 2px 2px rgba(255, 0, 255, 0.6), -2px -2px rgba(0, 255, 255, 0.6); }
+  25% { text-shadow: -2px 2px rgba(255, 0, 255, 0.6), 2px -2px rgba(0, 255, 255, 0.6); }
+  50% { text-shadow: 2px -2px rgba(255, 0, 255, 0.6), -2px 2px rgba(0, 255, 255, 0.6); }
+  75% { text-shadow: -2px -2px rgba(255, 0, 255, 0.6), 2px 2px rgba(0, 255, 255, 0.6); }
+  100% { text-shadow: 2px 2px rgba(255, 0, 255, 0.6), -2px -2px rgba(0, 255, 255, 0.6); }
+}
+
+.neon-text {
+  margin-left: 15%;
+  font-size: xx-large;
+}
+
+.links {
+  font-family: "Montserrat", sans-serif;
+}
+.quote {
+  font-family: 'Orbitron', sans-serif;
+}
+.story {
+  font-family: "Montserrat", sans-serif;
+}
+
+/*SCROLLBAR ADJUSTMENTS */
+
+html, body {
+  overflow-y: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track of the scrollbar */
+::-webkit-scrollbar-track {
+  background: linear-gradient(
+    0deg, 
+    rgb(50, 0, 83) 0%, 
+    rgb(0, 134, 105) 100%
+    );
+}
+
+/* Handle of the scrollbar */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    rgb(16, 177, 75), 
+    rgb(7, 185, 170)
+    );
+  border-radius: 10px;
+}

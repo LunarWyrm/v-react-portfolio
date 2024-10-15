@@ -4,7 +4,8 @@ import Home from './pages/Home';
 import Story from './pages/Story';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
-import Footer from './Footer'; // Import the Footer component
+import Footer from './Footer';
+import '../App.scss';
 
 export default function PortfolioContainer() {
   const [currentPage, setCurrentPage] = useState('Home');
@@ -27,11 +28,21 @@ export default function PortfolioContainer() {
   const handlePageChange = (page) => setCurrentPage(page);
 
   return (
-    <div className="bg-dark text-light min-vh-100 d-flex flex-column">
-      <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
-      <main className="container mt-4 flex-grow-1">
-        {renderPage()}
-      </main>
+    <div className="App is-flex is-flex-direction-column min-vh-100">
+      <div className="rainbow-bg"></div>
+      <div className="monstera-container">
+        <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
+        
+        <main className="main-container mt-4 is-flex-grow-1">
+          <div className="center-column">
+            
+            {renderPage()}
+          </div>
+        </main>
+        
+        <div className="monstera-left"></div>
+        <div className="monstera-right"></div>
+      </div>
       <Footer />
     </div>
   );
