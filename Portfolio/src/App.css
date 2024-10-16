@@ -10,11 +10,8 @@ body {
 .header {
   background-color: linear-gradient(135deg, #03b96d 0%,#02a25f 44%,#00824c 100%);
   color: #f0f0f0;
-  width: 100%;
-  padding: 20px;
   text-align: center;
   position: relative;
-  z-index: 10;
 }
 
 .home {

@@ -14,6 +14,9 @@ export default function Home() {
             Engler
           </center>
         </h1>
+        <h2 className="my-title">
+          Full-Stack Web Developer
+        </h2>
       </div>
     </div>
   );

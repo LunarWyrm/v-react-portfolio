@@ -6,10 +6,10 @@ export default function Footer() {
       <div className="container">
         <ul className="list-inline">
           <li className="list-inline-item">
-            <a href="https://github.com/your-github" className="text-light">GitHub</a>
+            <a href="https://github.com/LunarWyrm" className="text-light">GitHub</a>
           </li>
           <li className="list-inline-item">
-            <a href="https://linkedin.com/in/your-linkedin" className="text-light">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/vanessaengler/" className="text-light">LinkedIn</a>
           </li>
           <li className="list-inline-item">
             <a href="mailto:englerprogramming@gmail.com" className="text-light">Email</a>
