@@ -4,7 +4,27 @@ body {
   background-color: #121212;
   color: #f0f0f0;
   font-family: 'Orbitron', sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
+}
+
+main {
+  flex-grow: 1;
+  padding-bottom: 100px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 120vh;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow-y: auto;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .header {
@@ -16,20 +36,46 @@ body {
 
 .home {
   display: flex;
-  align-items: center; /* Aligns items vertically */
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.projects {
+  display: flex;
+  margin-top: 40px;
+  min-height: 100vh;
+}
+
+.intro {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.story {
+  position: relative;
+  margin-top: 100px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.title-projects {
+  text-align: center;
+  font-size: 50px;
+  margin-left: 50px;
+  text-shadow: 0 0 10px rgba(255, 0, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.7);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .profile-container {
   display: flex;
-  align-items: center; /* Centers the image and name vertically */
+  align-items: center;
 }
 
 .v-profile {
   width: 150px;
   height: 150px;
-  border-radius: 50%; /* Makes the image circular */
-  object-fit: cover; /* Ensures the image covers the entire area */
-  object-position: 50% 20%; /* Adjusts the focal point of the image */
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 20%;
   box-shadow: 
     0 0 10px 4px rgba(0, 255, 255, 0.9), 
     0 0 20px 8px rgba(255, 0, 255, 0.7),
@@ -46,22 +92,13 @@ body {
 .center-column {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   margin: 0 auto;
   padding: 20px;
   width: calc(100vw - 400px);
   height: 100vh;
   background-color: rgb(31, 31, 31);
   z-index: 1;
-}
-
-
-main {
-  flex-grow: 1;
-}
-
-.Footer {
-  margin-top: auto;
+  overflow-y: auto;
 }
 
 .monstera-container {
@@ -69,7 +106,7 @@ main {
   justify-content: space-between;
   position: relative;
   height: 100%;
-  width: 100vw; /* Full viewport width */
+  width: 100vw;
 }
 
 /* Left Monstera section */
@@ -77,9 +114,9 @@ main {
   background-image: url('/images/monstera_pattern.png');
   background-size: cover;
   background-repeat: no-repeat;
-  width: 200px; /* Adjust width to fit your design */
-  height: 100vh; /* Full viewport height */
-  position: fixed; /* Stick it to the left */
+  width: 200px;
+  height: 100vh;
+  position: fixed;
   left: 0;
 }
 
@@ -88,102 +125,129 @@ main {
   background-image: url('/images/monstera_pattern.png');
   background-size: cover;
   background-repeat: no-repeat;
-  width: 200px; /* Adjust width to fit your design */
-  height: 100vh; /* Full viewport height */
-  position: fixed; /* Stick it to the right */
+  width: 200px;
+  height: 100vh;
+  position: fixed;
   right: 0;
+}
+
+@media screen and (max-width: 900px) {
+  .monstera-left, .monstera-right {
+    display: none;
+  }
+
+  .center-column {
+    width: 100vw;
+    padding: 20px;
+    height: auto;
+    margin-bottom: 110px;
+    box-sizing: border-box;
+    max-height: none;
+    overflow-y: visible;
+  }
 }
 
 .name {
   font-size: 50px;
   margin-top: 10%;
   margin-left: 50px;
-  text-shadow: 0 0 10px rgba(255, 0, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.7); /* Text shadow */
-  transition: color 0.3s ease, text-shadow 0.3s ease; /* Transition effects */
+  text-shadow: 0 0 10px rgba(255, 0, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.7);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .name:hover {
-  color: #98E970; /* Green color on hover */
-  text-shadow: 0 0 20px rgba(255, 255, 0, 0.9), 0 0 30px rgba(128, 0, 255, 0.8); /* Shadow on hover */
-  animation: glitch 0.5s infinite; /* Glitch effect on hover */
+  color: #98E970;
+  text-shadow: 0 0 20px rgba(255, 255, 0, 0.9), 0 0 30px rgba(128, 0, 255, 0.8);
+  animation: glitch 0.5s infinite;
+}
+
+.my-title {
+  display: block;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 50px;
+  color: #cacaca;
 }
 
 /* Nav link styles */
 .nav {
-  display: flex;              /* Use Flexbox for layout */
-  justify-content: center;    /* Center items horizontally */
+  display: flex;
+  justify-content: center;
   background: linear-gradient(135deg, #03b96d 0%,#02a25f 44%,#00824c 100%);
   color: #f0f0f0;
-  width: 100%;                /* Full width of the page */
-  position: fixed;            /* Fixed positioning to stay at the top */
-  top: 0;                     /* Align to the top */
-  left: 0;                    /* Align to the left edge */
-  padding: 10px 0;           /* Add some padding */
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
   z-index: 10;
 }
 .nav-link {
-  color: #f0f0f0; /* Light color */
-  text-shadow: 0 0 5px rgba(0, 255, 255, 0.7); /* Text shadow */
-  transition: color 0.3s ease; /* Transition effect */
+  color: #f0f0f0;
+  text-shadow: 0 0 5px rgba(0, 255, 255, 0.7);
+  transition: color 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #98E970; /* Green color on hover */
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.9), 0 0 20px rgba(255, 0, 128, 0.8); /* Shadow on hover */
+  color: #98E970;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.9), 0 0 20px rgba(255, 0, 128, 0.8);
 }
 
 .nav-link.active {
-  background-color: #222222; /* Dark background for active link */
-  color: #ffffff; /* White text */
-  border-bottom: 2px solid #98E970; /* Green underline */
+  background-color: #222222;
+  color: #ffffff;
+  border-bottom: 2px solid #98E970;
 }
 
 /* Card styles */
 .card {
-  border: 1px solid #98E970; /* Green border */
-  box-shadow: 0 0 15px rgba(116, 165, 255, 0.918), 0 0 20px rgba(51, 255, 0, 0.7); /* Shadow */
-  transition: box-shadow 0.3s ease; /* Transition effect */
-margin: 10px;
+  border: 1px solid #98E970;
+  box-shadow: 0 0 15px rgba(116, 165, 255, 0.918), 0 0 20px rgba(51, 255, 0, 0.7);
+  transition: box-shadow 0.3s ease;
+  margin: 10px;
 }
 
 .card:hover {
-  box-shadow: 0 0 30px rgba(255, 0, 128, 0.9), 0 0 40px rgba(0, 255, 255, 0.9); /* Shadow on hover */
+  box-shadow: 0 0 30px rgba(255, 0, 128, 0.9), 0 0 40px rgba(0, 255, 255, 0.9);
 }
 
 /* Button styles */
 .btn-outline-light {
-  border-color: #98E970; /* Green border */
-  color: #98E970; /* Green text */
-  text-shadow: 0 0 5px rgba(128, 0, 255, 0.7); /* Text shadow */
-  transition: background-color 0.3s ease, color 0.3s ease, text-shadow 0.3s ease; /* Transition effects */
+  border-color: #98E970;
+  color: #98E970;
+  text-shadow: 0 0 5px rgba(128, 0, 255, 0.7);
+  transition: background-color 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .btn-outline-light:hover {
-  background-color: #98E970; /* Green background on hover */
-  color: #000000; /* Black text on hover */
-  text-shadow: none; /* Remove text shadow */
+  background-color: #98E970;
+  color: #000000;
+  text-shadow: none;
 }
+
 
 /* Footer styles */
 footer {
-  background-color: #121212; /* Dark footer background */
-  color: #98E970; /* Green text */
-  width: 100%; /* Full width */
+  background-color: #121212;
+  color: #98E970;
+  width: 100%;
   padding: 20px;
-  text-align: center; /* Center the text */
-  position: relative; /* Keeps the footer on top of the content */
-  z-index: 10; /* Ensures the footer is above the center box */
+  text-align: center;
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
 }
 
 footer a {
-  text-decoration: none; /* No underline */
-  color: #98E970; /* Green link color */
-  transition: color 0.3s ease, text-shadow 0.3s ease; /* Transition effects */
+  text-decoration: none;
+  color: #98E970;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 footer a:hover {
-  color: #ffffff; /* White link on hover */
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* Shadow on hover */
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
 }
 
 .copy-ve {
@@ -203,46 +267,163 @@ footer a:hover {
   margin-left: 15%;
   font-size: xx-large;
 }
-
+.links-section {
+  margin-top: 40px;
+}
+.title-links {
+  font-size: larger;
+}
 .links {
   font-family: "Montserrat", sans-serif;
+  margin-bottom: 30px;
+}
+.title-contact {
+  font-size: larger;
 }
 .quote {
   font-family: 'Orbitron', sans-serif;
 }
-.story {
-  font-family: "Montserrat", sans-serif;
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
+
+.email-form {
+  background-color: #222222;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 55, 0.7), 0 0 15px rgba(0, 255, 55, 0.7);
+  max-width: 700px; /* Made the form smaller */
+  width: 100%;
+  margin-top: 20px;
+}
+
+.email-form h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  color: #98e970;
+}
+
+.form-group {
+  display: flex;
+  justify-content: space-between;
+  max-height: 250px;
+}
+
+.left-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-right: 20px;
+}
+
+.left-group input {
+  margin-bottom: 30px; /* Added extra space between input fields */
+}
+
+.message-group {
+  flex: 1.8;
+  
+}
+
+.email-form label {
+  display: block;
+  margin-bottom: 5px;
+  color: #f0f0f0;
+}
+
+.email-form input,
+.email-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 1px;
+  border: 1px solid #98e970;
+  background-color: #121212;
+  color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.email-form textarea {
+  resize: none;
+}
+
+.email-form input[type="submit"] {
+  background-color: #98e970;
+  border: none;
+  color: #000000;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  margin-top: 20px; /* Extra space before the Send Message button */
+}
+
+.email-form input[type="submit"]:hover {
+  background-color: #f0f0f0;
+  color: #000000;
+}
+
+.email-form input:focus,
+.email-form textarea:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 255, 55, 0.7), 0 0 20px rgba(0, 255, 55, 0.7); /* Updated glow color */
+}
+
+/* Media Query for Small Viewports */
+@media (max-width: 600px) {
+  .form-group {
+    flex-direction: column;
+  }
+  .form-row {
+    flex-direction: column; /* Stack fields vertically */
+  }
+  .left-group,
+  .message-group {
+    width: 100%;
+    margin: 0;
+  }
+}
+
 
 /*SCROLLBAR ADJUSTMENTS */
+.center-column::-webkit-scrollbar {
+  width: 0;
+}
 
-html, body {
-  overflow-y: hidden;
+.center-column:hover::-webkit-scrollbar {
+  width: 10px;
+}
+
+.center-column::-webkit-scrollbar-track {
+  background: #003f91, #02a791;
+}
+
+.center-column::-webkit-scrollbar-thumb {
+  background: #00864e;
+  border-radius: 8px;
+}
+
+.center-column::-webkit-scrollbar-thumb:hover {
+  background: #00ad65; /* Darken the handle on hover */
 }
 
 ::-webkit-scrollbar {
-  width: 0px;
-  background: transparent;
+  width: 10px;
 }
 
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-/* Track of the scrollbar */
 ::-webkit-scrollbar-track {
-  background: linear-gradient(
-    0deg, 
-    rgb(50, 0, 83) 0%, 
-    rgb(0, 134, 105) 100%
-    );
+  background: #003f91, #02a791;
 }
 
-/* Handle of the scrollbar */
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(
-    rgb(16, 177, 75), 
-    rgb(7, 185, 170)
-    );
-  border-radius: 10px;
+  background: #00864e;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00ad65; /* Darken the handle on hover */
 }

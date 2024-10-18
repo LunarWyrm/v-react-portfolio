@@ -29,19 +29,21 @@ export default function PortfolioContainer() {
 
   return (
     <div className="App is-flex is-flex-direction-column min-vh-100">
-      <div className="rainbow-bg"></div>
-      <div className="monstera-container">
-        <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
-        
-        <main className="main-container mt-4 is-flex-grow-1">
-          <div className="center-column">
-            
-            {renderPage()}
-          </div>
-        </main>
-        
-        <div className="monstera-left"></div>
-        <div className="monstera-right"></div>
+      <div className="content-wrapper">
+        <div className="rainbow-bg"></div>
+        <div className="monstera-container">
+          <NavTabs currentPage={currentPage} handlePageChange={handlePageChange} />
+          
+          <main className="main-container mt-4 is-flex-grow-1">
+            <div className="center-column">
+              
+              {renderPage()}
+            </div>
+          </main>
+          
+          <div className="monstera-left"></div>
+          <div className="monstera-right"></div>
+        </div>
       </div>
       <Footer />
     </div>

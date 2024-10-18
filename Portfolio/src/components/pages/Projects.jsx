@@ -30,19 +30,23 @@ export default function Projects() {
   ];
 
   return (
-    <div className="container">
-      <h2 className="name my-4">My Projects</h2>
-      <div className="row">
-        {projectData.map((project, index) => (
-          <div className="col-md-4" key={index}>
-            <Project 
-              title={project.title} 
-              description={project.description} 
-              link={project.link} 
-              repo={project.repo} 
-            />
+    <div className="projects">
+      <div className="container">
+        <h2 className="title-projects my-4">My Projects</h2>
+        <div className="project-container">
+          <div className="row">
+            {projectData.map((project, index) => (
+              <div className="col-md-4" key={index}>
+                <Project 
+                  title={project.title} 
+                  description={project.description} 
+                  link={project.link} 
+                  repo={project.repo} 
+                />
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </div>
   );

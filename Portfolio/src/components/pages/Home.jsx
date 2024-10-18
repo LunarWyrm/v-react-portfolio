@@ -7,16 +7,16 @@ export default function Home() {
           src="/images/V_Profile_2024.jpg"
           alt="v_profile"
         />
-        <h1 className="name">
-          <center>
+        <div className="text-container">
+          <h1 className="name">
             Vanessa
             <br />
             Engler
-          </center>
-        </h1>
-        <h2 className="my-title">
-          Full-Stack Web Developer
-        </h2>
+          </h1>
+          <div className="my-title">
+            Full-Stack Web Developer
+          </div>
+        </div>
       </div>
     </div>
   );
