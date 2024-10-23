@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import NavTabs from './NavTabs';
 import Home from './pages/Home';
 import Story from './pages/Story';
+import Art from './pages/Art';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Footer from './Footer';
@@ -16,6 +17,8 @@ export default function PortfolioContainer() {
         return <Home />;
       case 'Story':
         return <Story />;
+      case 'Art':
+        return <Art />;
       case 'Projects':
         return <Projects />;
       case 'Contact':

@@ -39,7 +39,9 @@ html, body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  margin-top: -60px;
 }
+
 
 .projects {
   display: flex;
@@ -57,6 +59,19 @@ html, body {
   font-family: "Montserrat", sans-serif;
 }
 
+.art {
+  position: relative;
+  margin-top: 40px;
+}
+
+.title-art {
+  text-align: center;
+  font-size: 50px;
+  margin-left: 50px;
+  text-shadow: 0 0 10px rgba(255, 0, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.7);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
 .title-projects {
   text-align: center;
   font-size: 50px;
@@ -65,12 +80,42 @@ html, body {
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-.profile-container {
+.devicons {
+  justify-content: center;
+  margin-top: 40px;
+  position: relative; /* Ensure it's positioned correctly */
+}
+
+.devicons ul {
   display: flex;
-  align-items: center;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.devicons img {
+  width: 50px;
+  margin: 0 10px; /* Adds spacing between icons */
+}
+
+.profile-container {
+  justify-content: center;
+}
+
+.profile-content {
+  display: flex;
+  align-items: center; /* Aligns items in a row, vertically centered */
+  margin-bottom: 20px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .v-profile {
+  display: flex;
+  margin-right: 15px;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -85,6 +130,27 @@ html, body {
 
 .v-profile:hover {
   transform: scale(1.1);
+}
+
+.download-resume {
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-left: 50px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: 2px solid transparent;
+  background-color: transparent;
+  color: #98E970;
+  position: relative;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  border-image: linear-gradient(90deg, 
+      red, orange, yellow, green, blue, indigo, violet) 1;
+}
+
+.download-resume:hover {
+  color: #000;
 }
 
 /* Main Content Column in the Center */
@@ -326,7 +392,6 @@ footer a:hover {
 
 .message-group {
   flex: 1.8;
-  
 }
 
 .email-form label {
@@ -348,6 +413,7 @@ footer a:hover {
 
 .email-form textarea {
   resize: none;
+  height: 100px;
 }
 
 .email-form input[type="submit"] {
@@ -370,8 +436,10 @@ footer a:hover {
 .email-form input:focus,
 .email-form textarea:focus {
   outline: none;
-  box-shadow: 0 0 10px rgba(0, 255, 55, 0.7), 0 0 20px rgba(0, 255, 55, 0.7); /* Updated glow color */
+  box-shadow: 0 0 5px rgba(0, 255, 55, 0.7), 0 0 10px rgba(0, 255, 55, 0.7);
 }
+
+
 
 /* Media Query for Small Viewports */
 @media (max-width: 600px) {
