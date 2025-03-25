@@ -1,46 +1,46 @@
 
   
   /* Main App Background (the Rainbow Background) */
-  .App {
-    margin: 0;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(
-        90deg,
-        rgb(160, 25, 25),
-        rgb(190, 118, 16),
-        rgb(165, 165, 9),
-        rgb(82, 230, 82),
-        rgb(45, 132, 167),
-        rgb(144, 64, 201)
-    );
-    background-size: 1400% 1400%;
-    animation: rainbow 10s ease infinite;
-    position: relative; /* Added this to contain absolute elements */
-    overflow: hidden; /* To prevent horizontal scrolling */
-  }
+  // .App {
+  //   margin: 0;
+  //   height: 100vh;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  //   background: linear-gradient(
+  //       90deg,
+  //       rgb(160, 25, 25),
+  //       rgb(190, 118, 16),
+  //       rgb(165, 165, 9),
+  //       rgb(82, 230, 82),
+  //       rgb(45, 132, 167),
+  //       rgb(144, 64, 201)
+  //   );
+  //   background-size: 1400% 1400%;
+  //   animation: rainbow 10s ease infinite;
+  //   position: relative; /* Added this to contain absolute elements */
+  //   overflow: hidden; /* To prevent horizontal scrolling */
+  // }
   
-  /* Rainbow background animating behind */
-  @keyframes rainbow {
-    0%, 100% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-  }
+  // /* Rainbow background animating behind */
+  // @keyframes rainbow {
+  //   0%, 100% {
+  //     background-position: 0% 50%;
+  //   }
+  //   50% {
+  //     background-position: 100% 50%;
+  //   }
+  // }
 
-  /* Rainbow Background Animation */
-  .rainbow-bg {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    background: linear-gradient(90deg, rgba(255, 99, 99, 0.7), rgba(255, 179, 71, 0.7), rgba(255, 255, 99, 0.7), rgba(174, 255, 174, 0.7), rgba(135, 206, 235, 0.7), rgba(205, 133, 255, 0.7));
-    background-size: 1400% 1400%;
-    animation: rainbow 10s ease infinite;
-    z-index: -1; /* Ensure the rainbow is behind everything */
-  }
+  // /* Rainbow Background Animation */
+  // .rainbow-bg {
+  //   position: fixed;
+  //   width: 100%;
+  //   height: 100%;
+  //   z-index: 0;
+  //   background: linear-gradient(90deg, rgba(255, 99, 99, 0.7), rgba(255, 179, 71, 0.7), rgba(255, 255, 99, 0.7), rgba(174, 255, 174, 0.7), rgba(135, 206, 235, 0.7), rgba(205, 133, 255, 0.7));
+  //   background-size: 1400% 1400%;
+  //   animation: rainbow 10s ease infinite;
+  //   z-index: -1; /* Ensure the rainbow is behind everything */
+  // }
 

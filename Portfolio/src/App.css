@@ -49,6 +49,14 @@ html, body {
   min-height: 100vh;
 }
 
+.title-projects {
+  text-align: center;
+  font-size: 50px;
+  margin-left: 50px;
+  text-shadow: 0 0 5px lightgreen;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
 .intro {
   font-family: 'Orbitron', sans-serif;
 }
@@ -68,44 +76,24 @@ html, body {
   text-align: center;
   font-size: 50px;
   margin-left: 50px;
-  text-shadow: 0 0 10px rgba(255, 0, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.7);
+  text-shadow: 0 0 5px lightgreen;
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-.title-projects {
-  text-align: center;
-  font-size: 50px;
-  margin-left: 50px;
-  text-shadow: 0 0 10px rgba(255, 0, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.7);
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-.devicons {
-  justify-content: center;
-  margin-top: 40px;
-  position: relative; /* Ensure it's positioned correctly */
-}
-
-.devicons ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding: 0;
-}
-
-.devicons img {
-  width: 50px;
-  margin: 0 10px; /* Adds spacing between icons */
-}
+/* Profile/Name/Title/Resume */
 
 .profile-container {
   justify-content: center;
+  outline: auto;
+  outline-width: 5px;
+  outline-style: outset;
+  padding: 20px;
 }
 
 .profile-content {
   display: flex;
-  align-items: center; /* Aligns items in a row, vertically centered */
-  margin-bottom: 20px;
+  align-items: center;
+  padding: 15px;
 }
 
 .text-container {
@@ -115,21 +103,43 @@ html, body {
 
 .v-profile {
   display: flex;
-  margin-right: 15px;
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 10%;
   object-fit: cover;
   object-position: 50% 20%;
   box-shadow: 
-    0 0 10px 4px rgba(0, 255, 255, 0.9), 
-    0 0 20px 8px rgba(255, 0, 255, 0.7),
-    0 0 30px 12px rgba(255, 255, 0, 0.6);
+    0 0 5px 4px rgba(255, 255, 255, 0.9), 
+    0 0 10px 8px lightgreen,
+    0 0 15px 12px rgba(86, 179, 255, 0.6);
   transition: transform 0.3s ease;
 }
 
 .v-profile:hover {
   transform: scale(1.1);
+}
+
+.name {
+  text-align: center;
+  font-size: 45px;
+  margin-left: 50px;
+  text-shadow: 0 0 4px lightgreen, 0 0 3px rgb(67, 133, 67);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.name:hover {
+  color: lightgreen;
+  text-shadow: 0 0 20px lightgreen, 0 0 30px indigo;
+  animation: glitch 0.5s infinite;
+}
+
+.my-title {
+  display: block;
+  font-size: 22px;
+  text-align: center;
+  margin-top: 10px;
+  margin-left: 50px;
+  color: #cfcfcf;
 }
 
 .download-resume {
@@ -141,16 +151,82 @@ html, body {
   font-size: 18px;
   border: 2px solid transparent;
   background-color: transparent;
-  color: #98E970;
+  color: rgb(255, 255, 255);
   position: relative;
   cursor: pointer;
   transition: color 0.3s ease;
   border-image: linear-gradient(90deg, 
-      red, orange, yellow, green, blue, indigo, violet) 1;
+  lightgreen, rgb(29, 255, 217), lightgreen) 1;
 }
 
 .download-resume:hover {
-  color: #000;
+  color: lightgreen;
+}
+
+/* Socials / Devicons */
+
+.socials {
+  justify-content: center;
+  margin-top: 400px;
+  position: absolute;
+}
+
+.devicons {
+  justify-content: center;
+  margin-top: 480px;
+  position: absolute;
+}
+
+.devicons ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.devicons img {
+  width: 35px;
+  margin: 0 10px;
+}
+
+/* Art */
+.designs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.designs img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 10px;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto;
+  background-color: #121212;
+}
+
+@media screen and (max-width: 1200px) {
+  .designs {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .designs {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .designs {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Main Content Column in the Center */
@@ -197,7 +273,7 @@ html, body {
   right: 0;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 975px) {
   .monstera-left, .monstera-right {
     display: none;
   }
@@ -213,34 +289,11 @@ html, body {
   }
 }
 
-.name {
-  font-size: 50px;
-  margin-top: 10%;
-  margin-left: 50px;
-  text-shadow: 0 0 10px rgba(255, 0, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.7);
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-.name:hover {
-  color: #98E970;
-  text-shadow: 0 0 20px rgba(255, 255, 0, 0.9), 0 0 30px rgba(128, 0, 255, 0.8);
-  animation: glitch 0.5s infinite;
-}
-
-.my-title {
-  display: block;
-  font-size: 24px;
-  text-align: center;
-  margin-top: 10px;
-  margin-left: 50px;
-  color: #cacaca;
-}
-
 /* Nav link styles */
 .nav {
   display: flex;
   justify-content: center;
-  background: linear-gradient(135deg, #03b96d 0%,#02a25f 44%,#00824c 100%);
+  background: linear-gradient(135deg, rgb(25, 71, 43) 0%,rgb(57, 160, 143) 44%,rgb(25, 71, 43) 100%);
   color: #f0f0f0;
   width: 100%;
   position: fixed;
@@ -256,7 +309,8 @@ html, body {
 }
 
 .nav-link:hover {
-  color: #98E970;
+  color: #2bffca;
+  font-weight: bold;
   text-shadow: 0 0 10px rgba(0, 255, 255, 0.9), 0 0 20px rgba(255, 0, 128, 0.8);
 }
 
@@ -337,6 +391,7 @@ footer a:hover {
   margin-top: 40px;
 }
 .title-links {
+  color: lightgreen;
   font-size: larger;
 }
 .links {
@@ -344,7 +399,8 @@ footer a:hover {
   margin-bottom: 30px;
 }
 .title-contact {
-  font-size: larger;
+  color: lightgreen;
+  font-size: x-large;
 }
 .quote {
   font-family: 'Orbitron', sans-serif;
@@ -360,7 +416,7 @@ footer a:hover {
   background-color: #222222;
   padding: 15px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 255, 55, 0.7), 0 0 15px rgba(0, 255, 55, 0.7);
+  box-shadow: 0 0 10px lightgreen, 0 0 15px lightgreen;
   max-width: 700px; /* Made the form smaller */
   width: 100%;
   margin-top: 20px;
@@ -413,7 +469,7 @@ footer a:hover {
 
 .email-form textarea {
   resize: none;
-  height: 100px;
+  height: 200px;
 }
 
 .email-form input[type="submit"] {

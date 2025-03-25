@@ -5,7 +5,7 @@ export default function Home() {
         <div class="profile-content">
           <img
             className="v-profile"
-            src="/images/V_Profile_2024.jpg"
+            src="/images/VEngler2 Crop - By @novva.lux.jpg"
             alt="v_profile"
           />
           <div className="text-container">
@@ -22,6 +22,22 @@ export default function Home() {
         </div>
       </div>
       
+        {/* SOCIALS */}
+      <div className="socials">
+        <div className="container">
+          <ul className="list-inline">
+            <li className="list-inline-item">
+              <a href="https://github.com/LunarWyrm" className="has-text-success">GitHub</a>
+            </li>
+            <li className="list-inline-item">
+              <a href="https://www.linkedin.com/in/vanessaengler/" className="has-text-success">LinkedIn</a>
+            </li>
+            <li className="list-inline-item">
+              <a href="mailto:englerprogramming@gmail.com" className="has-text-success">Email</a>
+            </li>
+          </ul>
+        </div>
+      </div>
         {/* ICONS */}
         
       <div className="devicons">
