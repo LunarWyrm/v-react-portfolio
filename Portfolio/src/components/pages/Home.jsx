@@ -1,23 +1,25 @@
 export default function Home() {
   return (
     <div className="home">
-      <div className="profile-container">
-        <div class="profile-content">
-          <img
-            className="v-profile"
-            src="/images/VEngler2 Crop - By @novva.lux.jpg"
-            alt="v_profile"
-          />
-          <div className="text-container">
-            <h1 className="name">
-              Vanessa
-              <br />
-              Engler
-            </h1>
-            <div className="my-title">
-              Full-Stack Web Developer
+      <div className="profile-wrapper">
+        <div className="profile-container">
+          <div class="profile-content">
+            <img
+              className="v-profile"
+              src="/images/VEngler2 Crop - By @novva.lux.jpg"
+              alt="v_profile"
+            />
+            <div className="text-container">
+              <h1 className="name">
+                Vanessa
+                <br />
+                Engler
+              </h1>
+              <div className="my-title">
+                Full-Stack Web Developer
+              </div>
+          <a href="/documents/Vanessa Engler 2024.pdf"  download="Vanessa Engler 2024.pdf" className="download-resume button">Resume</a>
             </div>
-        <a href="/documents/Vanessa Engler 2024.pdf"  download="Vanessa Engler 2024.pdf" className="download-resume button">Resume</a>
           </div>
         </div>
       </div>
