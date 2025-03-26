@@ -320,12 +320,12 @@ html, body {
   border-bottom: 2px solid #98E970;
 }
 
+  /* Mobile Navbar */
 @media screen and (max-width: 768px) {
   .nav {
-    flex-direction: column;
-    padding: 10px;
-    height: auto;
-    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    flex-wrap: nowrap;
   }
 
   .nav-link {
