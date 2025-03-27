@@ -270,13 +270,15 @@ html, body {
 .center-column {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
   padding: 20px;
   width: calc(100vw - 400px);
   height: 100vh;
   background-color: rgb(31, 31, 31);
-  z-index: 1;
   overflow-y: auto;
+  position: relative;
+  margin-left: 200px;
+  margin-right: 200px;
+  z-index: 1;
 }
 
 .monstera-container {
@@ -285,6 +287,7 @@ html, body {
   position: relative;
   height: 100%;
   width: 100vw;
+  z-index: 0;
 }
 
 /* Left Monstera section */
@@ -309,6 +312,10 @@ html, body {
   right: 0;
 }
 
+.monstera-left, .monstera-right {
+  pointer-events: none;
+}
+
 @media screen and (max-width: 975px) {
   .monstera-left, .monstera-right {
     display: none;
@@ -329,7 +336,7 @@ html, body {
 .nav {
   display: flex;
   justify-content: center;
-  background: linear-gradient(135deg, rgb(25, 71, 43) 0%,rgb(57, 160, 143) 44%,rgb(25, 71, 43) 100%);
+  background: linear-gradient(135deg, rgb(39, 80, 53) 0%,rgb(57, 160, 108) 44%,rgb(39, 80, 53) 100%);
   color: #f0f0f0;
   width: 100%;
   position: fixed;
@@ -593,9 +600,11 @@ footer a:hover {
 }
 
 
-/*SCROLLBAR ADJUSTMENTS */
+/*Srollbar Adjustments */
+
+
 .center-column::-webkit-scrollbar {
-  width: 0;
+  width: 1;
 }
 
 .center-column:hover::-webkit-scrollbar {
@@ -630,4 +639,17 @@ footer a:hover {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #00ad65; /* Darken the handle on hover */
+}
+
+/* Mobile Scrollbar */
+
+@media screen and (max-width: 768px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  body, main {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
