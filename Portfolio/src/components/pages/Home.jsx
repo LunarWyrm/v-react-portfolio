@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <div className="home">
       <div className="profile-wrapper">
-        <div className="profile-container">
+        <div className="profile-box">
           <div class="profile-content">
             <img
               className="v-profile"
@@ -26,7 +26,7 @@ export default function Home() {
       
         {/* SOCIALS */}
       <div className="socials">
-        <div className="container">
+        <div className="social-container">
           <ul className="list-inline">
             <li className="list-inline-item">
               <a href="https://github.com/LunarWyrm" className="has-text-success">GitHub</a>
@@ -40,24 +40,25 @@ export default function Home() {
           </ul>
         </div>
       </div>
+
         {/* ICONS */}
         
       <div className="devicons">
         <ul>
-          <li className="node">
-            Node.js
+          <li className="devicon-unit">
+            <p className="devicon-name">Node.js</p>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" />
           </li>
-          <li className="react">
-            React
+          <li className="devicon-unit">
+          <p className="devicon-name">React</p>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" />
           </li>
-          <li className="vite">
-            Vite js
+          <li className="devicon-unit">
+          <p className="devicon-name">Vite js</p>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" />
           </li>
-          <li className="bulma">
-            Bulma
+          <li className="devicon-unit">
+          <p className="devicon-name">Bulma</p>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bulma/bulma-plain.svg" />
           </li>
         </ul>
