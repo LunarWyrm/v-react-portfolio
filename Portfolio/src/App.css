@@ -248,6 +248,12 @@ html, body {
   flex-wrap: wrap;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .socials { 
+  margin-top: 600px;
+  }
+}
 .devicons {
   display: flex;
   flex-direction: column;
