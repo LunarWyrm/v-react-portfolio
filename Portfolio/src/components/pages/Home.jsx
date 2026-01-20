@@ -6,7 +6,7 @@ export default function Home() {
           <div class="profile-content">
             <img
               className="v-profile"
-              src="/images/VEngler2 Crop - By @novva.lux.jpg"
+              src="/images/Profile3.jpg"
               alt="v_profile"
             />
             <div className="text-container">
@@ -18,7 +18,7 @@ export default function Home() {
               <div className="my-title">
                 Full-Stack Web Developer
               </div>
-          <a href="/documents/Vanessa Engler 2024.pdf"  download="Vanessa Engler 2024.pdf" className="download-resume button">Resume</a>
+          <a href="/documents/Vanessa Engler 2026.pdf"  download="Vanessa Engler 2026.pdf" className="download-resume button">Resume</a>
             </div>
           </div>
         </div>
