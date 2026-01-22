@@ -1,7 +1,7 @@
 export default function Art() {
   return (
     <div className="art">
-      <h1 className="title-art">Design 2D/3D</h1>
+      <h1 className="title-head">Design 2D/3D</h1>
       <div className="art-column" >
 
         <br />
