@@ -13,7 +13,7 @@ export default function Contact() {
       </div>
 
       <div className="form-section">
-        <h2 className="title-contact">Contact Me</h2>
+        <h2 className="title-head">Contact Me</h2>
         <form action="submit_form.php" method="POST" className="email-form">
           <div className="form-group">
             <div className="left-group">
