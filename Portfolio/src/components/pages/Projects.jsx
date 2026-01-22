@@ -38,7 +38,7 @@ export default function Projects() {
   return (
     <div className="projects">
       <div className="container">
-        <h2 className="title-projects my-4">My Projects</h2>
+        <h2 className="title-head my-4">My Projects</h2>
         <div className="project-container">
           <div className="row">
             {projectData.map((project, index) => (
