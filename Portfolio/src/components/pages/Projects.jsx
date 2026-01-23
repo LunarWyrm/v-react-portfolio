@@ -5,7 +5,7 @@ export default function Projects() {
   const projectData = [
     {
       title: 'Budgie Budget',
-      description: "Budgie is a visual budget app to keep track of your transactions and expenses. As of now, it is manual entry, but I'd like to add a functikn to connect your bank with a third party, such as Plaid.",
+      description: "Budgie is a visual budget app to keep track of your transactions and expenses. As of now, it is manual entry, but I'd like to add a function to connect your bank with a third party, such as Plaid.",
       link: 'https://budgiebudget.netlify.app/',
       repo: 'https://github.com/LunarWyrm/budgie',
     },
