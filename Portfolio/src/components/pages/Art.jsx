@@ -21,6 +21,8 @@ export default function Art() {
         <h2 className="subtitle-art">Independent</h2>
         <ul className="designs">
           <img src="/images/independent/Crane.png" alt="" />
+          <img src="/images/independent/Crane.png" alt="" />
+          <img src="/images/independent/Crane.png" alt="" />
           <img src="/images/independent/OrigamiSwan.png" alt="" />
           <img src="/images/independent/SeeingStars_PortfolioEdit.png" alt="" />
           <img src="/images/independent/Cards_Lions.png" alt="Cards_Lions" />
