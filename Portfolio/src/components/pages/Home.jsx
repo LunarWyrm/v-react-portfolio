@@ -29,7 +29,7 @@ export default function Home() {
         <div className="social-container">
           <ul className="list-inline">
             <li className="list-inline-item">
-              <a href="https://github.com/LunarWyrm" className="has-text-success">GitHub</a>
+              <a href="https://github.com/LunarWyrm" className="social-link has-text-success">GitHub</a>
             </li>
             <li className="list-inline-item">
               <a href="https://www.linkedin.com/in/vanessaengler/" className="has-text-success">LinkedIn</a>
