@@ -49,10 +49,9 @@ html, body {
   min-height: 100vh;
 }
 
-.title-projects {
+.title-head {
   text-align: center;
   font-size: 50px;
-  margin-left: 50px;
   text-shadow: 0 0 5px lightgreen;
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
@@ -70,14 +69,6 @@ html, body {
 .art {
   position: relative;
   margin-top: 40px;
-}
-
-.title-art {
-  text-align: center;
-  font-size: 50px;
-  margin-left: 50px;
-  text-shadow: 0 0 5px lightgreen;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 /* Profile/Name/Title/Resume */

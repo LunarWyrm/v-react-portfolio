@@ -4,6 +4,12 @@ import Project from '../Project';
 export default function Projects() {
   const projectData = [
     {
+      title: 'Budgie Budget',
+      description: "Budgie is a visual budget app to keep track of your transactions and expenses. As of now, it is manual entry, but I'd like to add a function to connect your bank with a third party, such as Plaid.",
+      link: 'https://budgiebudget.netlify.app/',
+      repo: 'https://github.com/LunarWyrm/budgie',
+    },
+    {
       title: 'Quiz Questers',
       description: 'QuizQuesters is for those who have a love for trivia and winning cool pixel art saved to your account to show all your friends!',
       link: 'https://crob127.github.io/QuizQuesters/',
@@ -32,7 +38,7 @@ export default function Projects() {
   return (
     <div className="projects">
       <div className="container">
-        <h2 className="title-projects my-4">My Projects</h2>
+        <h2 className="title-head my-4">My Projects</h2>
         <div className="project-container">
           <div className="row">
             {projectData.map((project, index) => (

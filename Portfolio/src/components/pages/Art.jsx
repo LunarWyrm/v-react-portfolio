@@ -1,7 +1,7 @@
 export default function Art() {
   return (
     <div className="art">
-      <h1 className="title-art">Design 2D/3D</h1>
+      <h1 className="title-head">Design 2D/3D</h1>
       <div className="art-column" >
 
         <br />
@@ -20,6 +20,8 @@ export default function Art() {
 
         <h2 className="subtitle-art">Independent</h2>
         <ul className="designs">
+          <img src="/images/independent/Budgie_Logo_V2.png" alt="" />
+          <img src="/images/independent/Budgie_Logo.png" alt="" />
           <img src="/images/independent/Crane.png" alt="" />
           <img src="/images/independent/OrigamiSwan.png" alt="" />
           <img src="/images/independent/SeeingStars_PortfolioEdit.png" alt="" />
